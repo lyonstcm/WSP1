@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #S.Ardizzone
 #FA2010
 #Sample implementation of SearchBase ABC
@@ -5,12 +6,12 @@
 import abc
 from SearchBase import SearchBase
 
-class SportsSearch(SearchBase):
+class AnimalSearch(SearchBase):
     results = None
     keywords = {}
     
     def search(self, query, rpp):
-        self.results = super(SportsSearch, self).search(query, rpp)
+        self.results = super(AnimalSearch, self).search(query, rpp)
         self.printResults()
 
     def printResults(self):
