@@ -2,5 +2,5 @@
 from AnimalSearch import AnimalSearch
 test = AnimalSearch()
 test.getKeywords()
-test.initDictionary()
-#test.search("dog", 25)
+test.search("dog", 25)
+test.reorder()

@@ -17,18 +17,26 @@ class AnimalSearch(SearchBase):
 
     
     def printResults(self):
-	for key in self.keywords.keys():
+	for key in self.key_dictionary.keys():
 		for res in self.results:
-			thetext = res.title.encode("utf8")
+			tmpTitle = (res.title.encode('utf-8').lower().strip('().,:-\'\"')).split(" ")
+			tmpDesc = (res.desc.encode('utf-8').lower().strip('().,:-\'\"')).split(" ")
+			thetext = tmpTitle
 			thetext+= " "
-			thetext+=res.desc.encode("utf8")
-			for word in thetext:
-				print word
-			#print thetext
-			#print res.title.encode("utf8")
-			#print res.desc.encode("utf8")
-			#print res.url.encode("utf8")
+			thetext+=tmpDesc
+			#print res.title.encode('utf8')
+			#print res.desc.encode('utf8')
 			#print
+			#print
+			for word in thetext:
+				if key == word:
+					print "MATCH FOUND"
+					print res.title.encode('utf8')
+					print res.desc.encode('utf8')
+					print word
+					print
+				
+			
 
     def initDictionary(self):
         key_file = open("keywords.txt",'r')
@@ -59,7 +67,9 @@ class AnimalSearch(SearchBase):
             orders.append(pair)
             pair = ()
             value = 0
-    
+	#for pair in orders:
+		#cmpfun(pair, pair + 1)
+	
     def getKeywords( self ):
     #reads file keywordsFile.txt, imports into a dictionary each keyword and the advertisement string to promote our cause
  
