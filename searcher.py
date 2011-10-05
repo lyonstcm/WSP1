@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
 from AnimalSearch import AnimalSearch
 test = AnimalSearch()
-test.search("team", 25)
+test.getKeywords()
+test.search("dog", 25)
