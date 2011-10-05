@@ -9,7 +9,7 @@ from SearchBase import SearchBase
 class AnimalSearch(SearchBase):
     results = None
     keywords = {}
-    key_found = {}
+    key_dictionary = {}
     
     def search(self, query, rpp):
         self.results = super(AnimalSearch, self).search(query, rpp)
@@ -17,17 +17,17 @@ class AnimalSearch(SearchBase):
 
     
     def printResults(self):
-	for keys in self.keywords:
-	  for res in self.results:
-	    for i in res.desc:
-	      if keys == i:
-		found_key+= keys
-		print keys
+	#for key[0] in self.keywords:
+		for res in self.results:
+	    #for i in res.desc:
+	      #if key == i:
+		#found_key+= key[0]
+		#print key[0]
 	     
-          #print res.title#.encode("utf8")
-          #print res.desc#.encode("utf8")
-          #print res.url#.encode("utf8")
-          #print
+			print res.title#.encode("utf8")
+			print res.desc#.encode("utf8")
+			print res.url#.encode("utf8")
+			print
 
     def initDictionary(self):
         key_file = open("keywords.txt",'r')
@@ -36,7 +36,7 @@ class AnimalSearch(SearchBase):
             for word in line.split():
                 self.keywords[word]=count
                 count = count+1
-
+	
     def reorder(self):
         self.initDictionary()
         value = 0
@@ -62,23 +62,22 @@ class AnimalSearch(SearchBase):
     def getKeywords( self ):
     #reads file keywordsFile.txt, imports into a dictionary each keyword and the advertisement string to promote our cause
  
-	keywordsFile = open( 'keywords.txt', 'r' )
-	#if keywordsFile != open( 'keywords.txt' ):
-	   #print "Could not open file"
+	keywordsFile = open( "keywords_dictionary.txt" )
    
 	for line in keywordsFile:
    
 	    pair = line.split( ':' ) #returns a list with two items (the key and the value)
  
             #add key and value pair to keywords dictionary
-            self.keywords[ pair[0] ] =  pair[1].strip( '\n' )
+            self.key_dictionary[ pair[0] ] =  pair[1].strip( '\n' )
  
             #alternatively:
             #  self.keywords[ pair[0] ] =  pair[1].strip( )
             #  would get rid of both the \n and the space after the ':'
 
-	keywordsFile.close( )
-	 #order results based on values
+	
+	keywordsFile.close( )    
+	    #order results based on values
     def cmpfun(a,b):
         return cmp(b[1],a[1])
         orders.sort(cmpfun)
