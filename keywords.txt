@@ -1,11 +1,12 @@
-animal
-cruelty
-protective
-aspca
-peta
-vegetarian
-vegan
-rise against
-ethical
-rights
-untasty
+animal: Animals have the same rights as humans do.
+cruelty: Cruelty to animals is illegal.
+protective: Protect animals like you protect yourself.
+aspca: Join Us Today!
+peta: Join Us Today!
+vegetarian: This is the right way to live.
+vegan: This is the right way to live.
+rise against: We love animals as well.
+ethical: Animals have feelings too.
+rights: Animal rights are just as important as human rights are.
+fight: Don't be violent, put your anger towards animal cruelty.
+untasty: Animals do not taste good.
