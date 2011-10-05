@@ -52,7 +52,7 @@ class AnimalSearch(SearchBase):
             value = 0
     
     def getKeywords( self ):
-    """reads file keywordsFile.txt, imports into a dictionary each keyword and the advertisement string to promote our cause"""
+    #reads file keywordsFile.txt, imports into a dictionary each keyword and the advertisement string to promote our cause
  
 	keywordsFile = open( "keywords.txt" )
    
