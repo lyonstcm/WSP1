@@ -17,17 +17,18 @@ class AnimalSearch(SearchBase):
 
     
     def printResults(self):
-	#for key[0] in self.keywords:
+	for key in self.keywords.keys():
 		for res in self.results:
-	    #for i in res.desc:
-	      #if key == i:
-		#found_key+= key[0]
-		#print key[0]
-	     
-			print res.title#.encode("utf8")
-			print res.desc#.encode("utf8")
-			print res.url#.encode("utf8")
-			print
+			thetext = res.title.encode("utf8")
+			thetext+= " "
+			thetext+=res.desc.encode("utf8")
+			for word in thetext:
+				print word
+			#print thetext
+			#print res.title.encode("utf8")
+			#print res.desc.encode("utf8")
+			#print res.url.encode("utf8")
+			#print
 
     def initDictionary(self):
         key_file = open("keywords.txt",'r')
