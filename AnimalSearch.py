@@ -9,17 +9,25 @@ from SearchBase import SearchBase
 class AnimalSearch(SearchBase):
     results = None
     keywords = {}
+    key_found = {}
     
     def search(self, query, rpp):
         self.results = super(AnimalSearch, self).search(query, rpp)
         self.printResults()
 
+    
     def printResults(self):
-        for res in self.results:
-            print res.title#.encode("utf8")
-            print res.desc#.encode("utf8")
-            print res.url#.encode("utf8")
-            print
+	for key[0] in self.keywords:
+	  for res in self.results:
+	    for i in res.desc:
+	      if key == i:
+		found_key+= key[0]
+		print key[0]
+	     
+          print res.title#.encode("utf8")
+          print res.desc#.encode("utf8")
+          print res.url#.encode("utf8")
+          print
 
     def initDictionary(self):
         key_file = open("keywords.txt",'r')
@@ -55,6 +63,8 @@ class AnimalSearch(SearchBase):
     #reads file keywordsFile.txt, imports into a dictionary each keyword and the advertisement string to promote our cause
  
 	keywordsFile = open( "keywords.txt" )
+	if keywordsFile != open( "keywords.txt" ):
+	   print "could not open file"
    
 	for line in keywordsFile:
    
@@ -66,7 +76,7 @@ class AnimalSearch(SearchBase):
             #alternatively:
             #  self.keywords[ pair[0] ] =  pair[1].strip( )
             #  would get rid of both the \n and the space after the ':'
- 
+
 	    keywordsFile.close( )
 	    #order results based on values
     def cmpfun(a,b):
@@ -77,6 +87,4 @@ class AnimalSearch(SearchBase):
             print i[0].title, "RANK = ", i[1]
             print i[0].desc
             print
-
-        
 
