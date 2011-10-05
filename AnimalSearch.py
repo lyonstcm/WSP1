@@ -50,10 +50,27 @@ class AnimalSearch(SearchBase):
             orders.append(pair)
             pair = ()
             value = 0
-
+    
+	def getKeywords( self ):
+        """reads file keywordsFile.txt, imports into a dictionary each keyword and the advertisement string to promote our cause"""
+ 
+        keywordsFile = open( "keywords.txt" )
+   
+        for line in keywordsFile:
+   
+            pair = line.split( ':' ) #returns a list with two items (the key and the value)
+ 
+            #add key and value pair to keywords dictionary
+            self.keywords[ pair[0] ] =  pair[1].strip( '\n' )
+ 
+            #alternatively:
+            #  self.keywords[ pair[0] ] =  pair[1].strip( )
+            #  would get rid of both the \n and the space after the ':'
+ 
+        keywordsFile.close( )
         #order results based on values
-        def cmpfun(a,b):
-            return cmp(b[1],a[1])
+    def cmpfun(a,b):
+        return cmp(b[1],a[1])
         orders.sort(cmpfun)
         
         for i in orders:
