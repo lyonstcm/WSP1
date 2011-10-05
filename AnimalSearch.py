@@ -17,17 +17,17 @@ class AnimalSearch(SearchBase):
 
     
     def printResults(self):
-	for key[0] in self.keywords:
+	for keys in self.keywords:
 	  for res in self.results:
 	    for i in res.desc:
-	      if key == i:
-		found_key+= key[0]
-		print key[0]
+	      if keys == i:
+		found_key+= keys
+		print keys
 	     
-          print res.title#.encode("utf8")
-          print res.desc#.encode("utf8")
-          print res.url#.encode("utf8")
-          print
+          #print res.title#.encode("utf8")
+          #print res.desc#.encode("utf8")
+          #print res.url#.encode("utf8")
+          #print
 
     def initDictionary(self):
         key_file = open("keywords.txt",'r')
@@ -62,9 +62,9 @@ class AnimalSearch(SearchBase):
     def getKeywords( self ):
     #reads file keywordsFile.txt, imports into a dictionary each keyword and the advertisement string to promote our cause
  
-	keywordsFile = open( "keywords.txt" )
-	if keywordsFile != open( "keywords.txt" ):
-	   print "could not open file"
+	keywordsFile = open( 'keywords.txt', 'r' )
+	#if keywordsFile != open( 'keywords.txt' ):
+	   #print "Could not open file"
    
 	for line in keywordsFile:
    
@@ -77,8 +77,8 @@ class AnimalSearch(SearchBase):
             #  self.keywords[ pair[0] ] =  pair[1].strip( )
             #  would get rid of both the \n and the space after the ':'
 
-	    keywordsFile.close( )
-	    #order results based on values
+	keywordsFile.close( )
+	 #order results based on values
     def cmpfun(a,b):
         return cmp(b[1],a[1])
         orders.sort(cmpfun)
