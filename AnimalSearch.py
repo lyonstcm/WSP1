@@ -9,7 +9,7 @@ from SearchBase import SearchBase
 class AnimalSearch(SearchBase):
     results = None
     keywords = {}
-    key_dictionary = []
+    key_list = []
     
     def search(self, query, rpp):
         self.results = super(AnimalSearch, self).search(query, rpp)
@@ -18,8 +18,8 @@ class AnimalSearch(SearchBase):
     
     def printResults(self):
 	i = 0;
-	for key in self.key_dictionary:
-		j = self.key_dictionary[i][0]
+	for key in self.key_list:
+		j = self.key_list[i][0]
 		i+=1
 		for res in self.results:
 			tmpTitle = (res.title.encode('utf-8').lower().strip('().,:-\'\"')).split(" ")
@@ -88,9 +88,9 @@ class AnimalSearch(SearchBase):
 		#zipped = zip(word,def1,def2)
             #add key and value pair to keywords dictionary
 		#print zipped
-		self.key_dictionary.append(triplet)
+		self.key_list.append(triplet)
 		
-			#self.key_dictionary
+			#self.key_list
 	
             #alternatively:
             #  self.keywords[ pair[0] ] =  pair[1].strip( )
