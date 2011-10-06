@@ -10,3 +10,7 @@ ethical: Animals have feelings too.
 rights: Animal rights are just as important as human rights are.
 fight: Don't be violent, put your anger towards animal cruelty.
 untasty: Animals do not taste good.
+shampoo: Shampoo if for hair, not for fur.
+conditioner: Conditioner is for hair, not for fur.
+beauty products: Put eyeliner on your wife, not your dog.
+make up: Animals are too beautiful for make up.

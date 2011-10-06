@@ -1,0 +1,2 @@
+For keywords add multiple sentences and have a rand int decide which to concatinate with the google description.
+
