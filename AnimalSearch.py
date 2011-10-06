@@ -9,7 +9,7 @@ from SearchBase import SearchBase
 class AnimalSearch(SearchBase):
     results = None
     keywords = {}
-    key_dictionary = {}
+    key_dictionary = []
     
     def search(self, query, rpp):
         self.results = super(AnimalSearch, self).search(query, rpp)
@@ -77,15 +77,17 @@ class AnimalSearch(SearchBase):
    
 	for line in keywordsFile:
    
-	    pair = line.split( ':' ) #returns a list with two items (the key and the value)
- 
+	    triplet = line.split( ':' ) #returns a list with  items (the key and the value)
+		
             #add key and value pair to keywords dictionary
-            self.key_dictionary[ pair[0] ] =  pair[1].strip( '\n' )
- 
+			self.key_dictionary.append(triplet)
+			#self.key_dictionary
+			
             #alternatively:
             #  self.keywords[ pair[0] ] =  pair[1].strip( )
             #  would get rid of both the \n and the space after the ':'
-
+	for trip in self.key_dictionary:
+		print trip
 	
 	keywordsFile.close( )    
 	    #order results based on values
