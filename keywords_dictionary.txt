@@ -1,4 +1,4 @@
-animal: Animals have the same rights as humans do.: test1 here!
+animal: Animals have the same rights as humans do.: Animals were put here with equal rights.: Combined there are more animals on the planet than humans.: Save our animals.
 cruelty: Cruelty to animals is illegal.: test1 here!
 protective: Protect animals like you protect yourself.: test1 here!
 aspca: Join Us Today!: test1 here!
@@ -8,7 +8,7 @@ vegan: This is the right way to live.: test1 here!
 rise against: We love animals as well.: test1 here!
 ethical: Animals have feelings too.: test1 here!
 rights: Animal rights are just as important as human rights are.: test1 here!
-fight: Don't be violent, put your anger towards animal cruelty.: test1 here!
+fight: Don't be violent, put your anger towards animal cruelty.: Go to a boxing match, dont kick your dog.: If you really like violence go to the movies.: Physical violence is not the answer.
 untasty: Animals do not taste good.: test1 here!
 shampoo: Shampoo if for hair, not for fur.: test1 here!
 conditioner: Conditioner is for hair, not for fur.: test1 here!

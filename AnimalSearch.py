@@ -20,7 +20,7 @@ class AnimalSearch(SearchBase):
 	i = 0;
 	for key in self.key_list:
 		j = self.key_list[i][0]
-		random1 = random.randint(1,2)
+		random1 = random.randint(1,4)
 		k = self.key_list[i][random1]
 		i+=1
 		for res in self.results:
