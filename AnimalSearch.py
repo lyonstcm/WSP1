@@ -2,14 +2,14 @@
 #S.Ardizzone
 #FA2010
 #Sample implementation of SearchBase ABC
-
+import random
 import abc
 from SearchBase import SearchBase
 
 class AnimalSearch(SearchBase):
     results = None
     keywords = {}
-    key_dictionary = {}
+    key_list = []
     
     def search(self, query, rpp):
         self.results = super(AnimalSearch, self).search(query, rpp)
@@ -17,7 +17,12 @@ class AnimalSearch(SearchBase):
 
     
     def printResults(self):
-	for key in self.key_dictionary.keys():
+	i = 0;
+	for key in self.key_list:
+		j = self.key_list[i][0]
+		random1 = random.randint(1,2)
+		k = self.key_list[i][random1]
+		i+=1
 		for res in self.results:
 			tmpTitle = (res.title.encode('utf-8').lower().strip('().,:-\'\"')).split(" ")
 			tmpDesc = (res.desc.encode('utf-8').lower().strip('().,:-\'\"')).split(" ")
@@ -29,13 +34,11 @@ class AnimalSearch(SearchBase):
 			#print
 			#print
 			for word in thetext:
-				if key == word:
+				if j == word:
 					print "MATCH FOUND"
-					print res.title.encode('utf8')
-					print res.desc.encode('utf8')
 					print word
-					print
-				
+					print res.title.encode('utf8')
+					print k
 			
 
     def initDictionary(self):
@@ -77,18 +80,24 @@ class AnimalSearch(SearchBase):
    
 	for line in keywordsFile:
    
-	    pair = line.split( ':' ) #returns a list with two items (the key and the value)
- 
+		triplet = line.split( ':' ) #returns a list with  items (the key and the value)
+		
+		word = triplet[0]
+		def1 = triplet[1]
+		def2 = triplet[2]
+		#zipped = zip(word,def1,def2)
             #add key and value pair to keywords dictionary
-            self.key_dictionary[ pair[0] ] =  pair[1].strip( '\n' )
- 
+		#print zipped
+		self.key_list.append(triplet)
+		
+			#self.key_list
+	
             #alternatively:
             #  self.keywords[ pair[0] ] =  pair[1].strip( )
             #  would get rid of both the \n and the space after the ':'
-
 	
 	keywordsFile.close( )    
-	    #order results based on values
+		#order results based on values
     def cmpfun(a,b):
         return cmp(b[1],a[1])
         orders.sort(cmpfun)
@@ -97,4 +106,6 @@ class AnimalSearch(SearchBase):
             print i[0].title, "RANK = ", i[1]
             print i[0].desc
             print
-
+	def getkey(keywords):
+		return word
+		

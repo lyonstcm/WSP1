@@ -1,16 +1,16 @@
-animal: Animals have the same rights as humans do.
-cruelty: Cruelty to animals is illegal.
-protective: Protect animals like you protect yourself.
-aspca: Join Us Today!
-peta: Join Us Today!
-vegetarian: This is the right way to live.
-vegan: This is the right way to live.
-rise against: We love animals as well.
-ethical: Animals have feelings too.
-rights: Animal rights are just as important as human rights are.
-fight: Don't be violent, put your anger towards animal cruelty.
-untasty: Animals do not taste good.
-shampoo: Shampoo if for hair, not for fur.
-conditioner: Conditioner is for hair, not for fur.
-beauty products: Put eyeliner on your wife, not your dog.
-make up: Animals are too beautiful for make up.
+animal: Animals have the same rights as humans do.: test1 here!
+cruelty: Cruelty to animals is illegal.: test1 here!
+protective: Protect animals like you protect yourself.: test1 here!
+aspca: Join Us Today!: test1 here!
+peta: Join Us Today!: test1 here!
+vegetarian: This is the right way to live.: test1 here!
+vegan: This is the right way to live.: test1 here!
+rise against: We love animals as well.: test1 here!
+ethical: Animals have feelings too.: test1 here!
+rights: Animal rights are just as important as human rights are.: test1 here!
+fight: Don't be violent, put your anger towards animal cruelty.: test1 here!
+untasty: Animals do not taste good.: test1 here!
+shampoo: Shampoo if for hair, not for fur.: test1 here!
+conditioner: Conditioner is for hair, not for fur.: test1 here!
+beauty products: Put eyeliner on your wife, not your dog.: test1 here!
+make up: Animals are too beautiful for make up.: test1 here!
