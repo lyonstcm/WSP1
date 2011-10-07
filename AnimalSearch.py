@@ -2,7 +2,7 @@
 #S.Ardizzone
 #FA2010
 #Sample implementation of SearchBase ABC
-
+import random
 import abc
 from SearchBase import SearchBase
 
@@ -20,6 +20,8 @@ class AnimalSearch(SearchBase):
 	i = 0;
 	for key in self.key_list:
 		j = self.key_list[i][0]
+		random1 = random.randint(1,2)
+		k = self.key_list[i][random1]
 		i+=1
 		for res in self.results:
 			tmpTitle = (res.title.encode('utf-8').lower().strip('().,:-\'\"')).split(" ")
@@ -34,11 +36,9 @@ class AnimalSearch(SearchBase):
 			for word in thetext:
 				if j == word:
 					print "MATCH FOUND"
-					print res.title.encode('utf8')
-					print res.desc.encode('utf8')
 					print word
-					print
-				
+					print res.title.encode('utf8')
+					print k
 			
 
     def initDictionary(self):
