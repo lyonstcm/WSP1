@@ -3,4 +3,9 @@ For keywords add multiple sentences and have a rand int decide which to concatin
 Must Add:
 
 If a query resutls do not match any of our keywords, our cause will not be supported
+Here's an idea: how about if we don't get any matches, we add a suggestion with a word starting with the same letter?
+Ex: search query "zippers"
+We would add:
+Did you mean "zebra?"
 
+How easy would something like this be to implement?
