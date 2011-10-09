@@ -1,15 +1,15 @@
-animal: Animals have the same rights as humans do.: Animals were put here with equal rights.: Combined there are more animals on the planet than humans.: Save our animals.
-cruelty: Cruelty to animals is illegal.: test1 here1: test2.: test3.
-protective: Protect animals like you protect yourself.: test1 here1: test2.: test3.
-aspca: Join Us Today!: test1 here1: test2.: test3.
-peta: Join Us Today!: test1 here1: test2.: test3.
-vegetarian: This is the right way to live.: test1 here1: test2.: test3.
+animal: Animals have the same rights as humans do.: Animals were put here with equal rights.: Combined there are more animals on the planet than humans.: Save our animals.: Animal cruelty is unacceptable.: Our animals are precious.: Speak for the animals, for they cannot speak for themselves.: Join the cause - fight for animal rights.: Animals deserve equal rights.: Animals are part of our ecosystem and must not be mistreated.
+cruelty: Cruelty to animals is illegal.: Treat animals the way you would want to be treated.: Animal cruelty must be stopped.: Animals have feelings too.: Love and respect all animals.: Animal cruelty is wrong.: A dog is man's best friend.: Don't mistreat animals.: Help animals, do not harm them.: Fish are friends, not food.
+protective: Protect animals like you protect yourself.: If you see a crime against animals, report it.: Protect yourself and your pets.: Make the world a safe place for animals.: Don't let animal cruelty continue.: Every animal, big and small, deserves protection from humans.: We only have one planet - protect its animals.: Animals all over the world need your protection.: Protect Earth's creatures!: Save animals from human cruelty.
+aspca: Join Us Today!: American Society for the Prevention of Cruelty to Animals wants you to help.: The ASPCA rescued over 200 animals after the World Trade Center attacks.: Animal cops have the same power as regular police officers.: Every year, three to four million animals are euthanized in shelters. Adopt today!: The ASPCA helps animals all over America.: Adopt a pet - save a life.: Spay and neuter your pets.: Chaining and tethering lead to increased bite risk. Don't be cruel.: The ASPCA looks out for animals everywhere.
+peta: Join Us Today!: Bears don't ride bicycles in the wild.: People want ethical treatement of animals.: Animals don't "belong" to anyone.: How would you like if someone was experimenting on you?: Animals fight for their lives every day. Help them.: End animal homelessness. Adopt today.: Animal birth control helps control overpopulation.: PETA is dedicated to saving the lives of animals.: Chickens aren't meant to be kept in boxes.
+vegetarian: This is the right way to live.: Fish are friends, not food!: test2.: test3.
 vegan: This is the right way to live.: test1 here1: test2.: test3.
 rise against: We love animals as well.: test1 here1: test2.: test3.
 ethical: Animals have feelings too.: test1 here1: test2.: test3.
 rights: Animal rights are just as important as human rights are.: test1 here1: test2.: test3.
 fight: Don't be violent, put your anger towards animal cruelty.: Go to a boxing match, dont kick your dog.: If you really like violence go to the movies.: Physical violence is not the answer.
-untasty: Animals do not taste good.: test1 here1: test2.: test3.
+untasty: Animals do not taste good.: Did you know alcohol is dangerous to pets?: test2.: test3.
 shampoo: Shampoo if for hair, not for fur.: test1 here1: test2.: test3.
 conditioner: Conditioner is for hair, not for fur.: test1 here1: test2.: test3.
 beauty products: Put eyeliner on your wife, not your dog.: test1 here1: test2.: test3.
