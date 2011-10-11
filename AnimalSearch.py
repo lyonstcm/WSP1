@@ -2,22 +2,29 @@
 #S.Ardizzone
 #FA2010
 #Sample implementation of SearchBase ABC
-import random
 import abc
+import random
+from operator import itemgetter
 from SearchBase import SearchBase
 
 class AnimalSearch(SearchBase):
     results = None
     keywords = {}
     key_list = []
+    orders_sorted = []
+    
     
     def search(self, query, rpp):
         self.results = super(AnimalSearch, self).search(query, rpp)
-        self.printResults()
 
     
     def printResults(self):
 	i = 0;
+	for a in self.orders_sorted:
+	    print a[0].title, "RANK = ", a[1]
+	    print a[0].desc
+	    print
+	    
 	for key in self.key_list:
 		j = self.key_list[i][0]
 		random1 = random.randint(1,4)
@@ -31,10 +38,10 @@ class AnimalSearch(SearchBase):
 			thetext+=tmpDesc
 			#print res.title.encode('utf8')
 			#print res.desc.encode('utf8')
-			#print
-			#print
 			#for word in thetext:
 				#if j == word:
+	
+
 					#print "MATCH FOUND"
 					#print word
 					#print res.title.encode('utf8')
@@ -56,25 +63,30 @@ class AnimalSearch(SearchBase):
 		#print "ORDERED"
         #search titles and descriptions for keywords
         for res in self.results:
+	    key_found = False
             tmpTitle = (res.title.encode('utf-8').lower().strip('().,:-\'\"')).split(" ")
             tmpDesc = (res.desc.encode('utf-8').lower().strip('().,:-\'\"')).split(" ")
             for key in self.keywords.keys():
                 for t in tmpTitle:
                     if key == t:
                         value+=self.keywords[key]
+                        key_found = True
                 for t in tmpDesc:
                     if key == t:
                         value+=self.keywords[key]
+                        key_found = True
             pair = res, value
             orders.append(pair)
             pair = ()
             value = 0
-	    orders.sort(cmpfun)
-		for i in orders:
-			print i[0].title, "RANK = ", i[1]
-			print i[0].desc
-			print
-	def getKeywords( self ):
+	self.orders_sorted = sorted(orders, key=itemgetter(1), reverse=True)
+	#for i in orders_sorted:  
+	    #print i[0].title, "RANK = ", i[1]
+	    #print i[0].desc
+	    #print
+	return key_found
+	
+    def getKeywords( self ):
     #reads file keywordsFile.txt, imports into a dictionary each keyword and the advertisement string to promote our cause
  
 	keywordsFile = open( "keywords_dictionary.txt" )
@@ -99,9 +111,3 @@ class AnimalSearch(SearchBase):
 	
 	keywordsFile.close( )    
 	#order results based on values
-	
-    def cmpfun(a,b):
-        return cmp(b[1],a[1])
-
-
-		
