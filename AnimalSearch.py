@@ -69,11 +69,12 @@ class AnimalSearch(SearchBase):
             orders.append(pair)
             pair = ()
             value = 0
-		
-	for item in orders:
-		print item
-	
-    def getKeywords( self ):
+	    orders.sort(cmpfun)
+		for i in orders:
+			print i[0].title, "RANK = ", i[1]
+			print i[0].desc
+			print
+	def getKeywords( self ):
     #reads file keywordsFile.txt, imports into a dictionary each keyword and the advertisement string to promote our cause
  
 	keywordsFile = open( "keywords_dictionary.txt" )
@@ -97,14 +98,10 @@ class AnimalSearch(SearchBase):
             #  would get rid of both the \n and the space after the ':'
 	
 	keywordsFile.close( )    
-		#order results based on values
+	#order results based on values
+	
     def cmpfun(a,b):
         return cmp(b[1],a[1])
-        orders.sort(cmpfun)
-        
-        for i in orders:
-            print i[0].title, "RANK = ", i[1]
-            print i[0].desc
-            print
+
 
 		
