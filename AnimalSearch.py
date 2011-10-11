@@ -33,14 +33,13 @@ class AnimalSearch(SearchBase):
 			#print res.desc.encode('utf8')
 			#print
 			#print
-			for word in thetext:
-				if j == word:
-					print "MATCH FOUND"
-					print word
-					print res.title.encode('utf8')
-					print k
+			#for word in thetext:
+				#if j == word:
+					#print "MATCH FOUND"
+					#print word
+					#print res.title.encode('utf8')
+					#print k
 			
-
     def initDictionary(self):
         key_file = open("keywords.txt",'r')
         count = 1
@@ -54,7 +53,7 @@ class AnimalSearch(SearchBase):
         value = 0
         orders = []
         pair = ()
-        
+		#print "ORDERED"
         #search titles and descriptions for keywords
         for res in self.results:
             tmpTitle = (res.title.encode('utf-8').lower().strip('().,:-\'\"')).split(" ")
@@ -70,8 +69,9 @@ class AnimalSearch(SearchBase):
             orders.append(pair)
             pair = ()
             value = 0
-	#for pair in orders:
-		#cmpfun(pair, pair + 1)
+		
+	for item in orders:
+		print item
 	
     def getKeywords( self ):
     #reads file keywordsFile.txt, imports into a dictionary each keyword and the advertisement string to promote our cause
@@ -106,6 +106,5 @@ class AnimalSearch(SearchBase):
             print i[0].title, "RANK = ", i[1]
             print i[0].desc
             print
-	def getkey(keywords):
-		return word
+
 		
