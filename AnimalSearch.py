@@ -87,7 +87,7 @@ class AnimalSearch(SearchBase):
 	    print res[0].desc.encode('utf8')
 	    if res[2] != None:
 	        ran = random.randint(1,10)
-		for key1 in self.key_list:
+		for key1 in self.key_list: #appends a random sentence to the result based on keyword found that supports our cause
 		    if key1[0] == res[2]:
 			print key1[ran]
 	    print
@@ -96,7 +96,7 @@ class AnimalSearch(SearchBase):
 
 	   	    
 		
-    def initDictionary(self):
+    def initDictionary(self): #initialize dictionary and associate weights with keywords
         key_file = open("keywords.txt",'r')
         count = 1
         for line in key_file:
@@ -110,9 +110,8 @@ class AnimalSearch(SearchBase):
         orders = []
         pair = ()
         keyfound1 = 0
-		#print "ORDERED"
-        #search titles and descriptions for keywords
-	
+
+        #search titles and descriptions of search results for our keywords
         for res in self.results:
 	    
             tmpTitle = (res.title.encode('utf-8').lower().strip('().,:-\'\"')).split(" ")
@@ -134,21 +133,21 @@ class AnimalSearch(SearchBase):
             orders.append(pair)
             pair = ()
             value = 0
-	self.orders_sorted = sorted(orders, key=itemgetter(1), reverse=True) 
+	self.orders_sorted = sorted(orders, key=itemgetter(1), reverse=True) #sort results by weight, placing the most relevent results at the top of the list 
 
 
 	return self.key_found
 	
     def getKeywords( self ):
-    #reads file keywordsFile.txt, imports into a dictionary each keyword and the advertisement string to promote our cause
- 
+    #reads file keywordsFile.txt, imports into a dictionary each keyword and the differing advertisement strings to promote our cause
+    #modified Michelle Sharer's code from the Wiki
 	keywordsFile = open( "keywords_dictionary.txt" )
    
 	for line in keywordsFile:
    
 		defs = line.split( ':' ) #returns a list with  items (the key and the value)
 		
-		word = defs[0]
+		word = defs[0] 
 		def1 = defs[1]
 		def2 = defs[2]
 		def3 = defs[3]
@@ -159,15 +158,13 @@ class AnimalSearch(SearchBase):
 		def8 = defs[8]
 		def9 = defs[9]
 		def10 = defs[10]
-		#zipped = zip(word,def1,def2)
-		#add key and value pair to keywords dictionary
-		#print zipped
-		self.key_list.append(defs)
+		
+		self.key_list.append(defs) # stores a tuple for each keyword with associated sentences that support our cause
 		
 	
 	keywordsFile.close( )    
-	#order results based on values
-    def keychecker(self):
+	
+    def keychecker(self): #checks whether a given search has a keyword found in the results
 	thetext = ""
 	for key in self.key_list: 
 	    for res in self.results:
